@@ -15,15 +15,18 @@ beach_ball = pygame.image.load(os.path.join(
 
 def draw_screen(xpos, ypos, sizex=150, sizey=150):
     window.fill((255, 255, 255))
-    beach_ball_resized = pygame.transform.scale(beach_ball, (150, 150))
+    beach_ball_resized = pygame.transform.scale(beach_ball, (sizex, sizey))
     window.blit(beach_ball_resized, (xpos, ypos))
+    pygame.display.update()
+    pygame.display.flip()
 
 
 def main():
     xpos = 100
     ypos = 100
+    sizex = 150
+    sizey = 150
     while(True):
-        pygame.display.update()
         for event in pygame.event.get():
             if (event.type == QUIT or (event.type == pygame.KEYUP and event.key == pygame.K_q)):
                 pygame.quit()
@@ -48,8 +51,19 @@ def main():
                 NULL
             else:
                 ypos -= 1
-
-        draw_screen(xpos, ypos)
+        if pygame.key.get_pressed()[pygame.K_m]:
+            if sizex == 0 and sizey == 0:
+                NULL
+            else:
+                sizex -= 1
+                sizey -= 1
+        if pygame.key.get_pressed()[pygame.K_p]:
+            if sizex == 600 and sizey == 600:
+                NULL
+            else:
+                sizex += 1
+                sizey += 1
+        draw_screen(xpos, ypos, sizex, sizey)
 
 
 if __name__ == '__main__':
