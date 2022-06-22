@@ -15,14 +15,17 @@ window = pygame.display.set_mode((height, width), pygame.RESIZABLE)
 pygame.display.set_caption("Display Tweaks")  # set the caption of the window
 pygame.display.set_icon(logo)  # set the icon of the window
 
-while(True):  # infinite game loop
-    fps = pygame.time.Clock()  # create a clock object
-    fps.tick(60)  # set the fps to 60
-    pygame.display.update()  # update the display
-    for event in pygame.event.get():  # check for events
-        if event.type == QUIT:  # if the user clicks the close button
-            pygame.quit()  # quit the pygame module
-            sys.exit()  # exit the program
-        if (event.type == pygame.KEYUP and event.key == pygame.K_f):  # if the user releases the 'f' key
-            pygame.display.toggle_fullscreen()  # toggle fullscreen
-    window.fill((65, 75, 90))  # fill the window with a color
+
+def main():
+    while(True):  # infinite game loop
+        fps = pygame.time.Clock()  # create a clock object
+        fps.tick(60)  # set the fps to 60
+        pygame.display.update()  # update the display
+        for event in pygame.event.get():  # check for events
+            if event.type == QUIT:  # if the user clicks the close button
+                pygame.quit()  # quit the pygame module
+                sys.exit()  # exit the program
+            # if the user releases the 'f' key
+            if (event.type == pygame.KEYUP and event.key == pygame.K_f):
+                pygame.display.toggle_fullscreen()  # toggle fullscreen
+        window.fill((65, 75, 90))  # fill the window with a color
