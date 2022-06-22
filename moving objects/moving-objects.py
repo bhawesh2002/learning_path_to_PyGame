@@ -9,3 +9,9 @@ pygame.init()
 height = 800
 width = 600
 window = pygame.display.set_mode((height, width))
+
+while(True):
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
