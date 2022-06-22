@@ -11,6 +11,8 @@ width = 600
 window = pygame.display.set_mode((height, width))
 beach_ball = pygame.image.load(os.path.join(
     "color changes", "Assets", "beach-ball.jpg"))
+
+
 def draw_screen(xpos, ypos, sizex=150, sizey=150):
     beach_ball_resized = pygame.transform.scale(beach_ball, (sizex, sizey))
     beach_ball.set_colorkey((255, 255, 255))
@@ -20,6 +22,7 @@ def draw_screen(xpos, ypos, sizex=150, sizey=150):
 
 
 def main():
+    window.fill((255, 255, 255))
     xpos = 100
     ypos = 100
     sizex = 150
@@ -61,6 +64,14 @@ def main():
             else:
                 sizex += 1
                 sizey += 1
+        if(pygame.key.get_pressed()[pygame.K_y]):
+            window.fill((255, 235, 20))
+        if(pygame.key.get_pressed()[pygame.K_r]):
+            window.fill((255, 0, 0))
+        if(pygame.key.get_pressed()[pygame.K_b]):
+            window.fill((0, 0, 255))
+        if (pygame.key.get_pressed()[pygame.K_w]):
+            window.fill((255, 255, 255))
         draw_screen(xpos, ypos, sizex, sizey)
 
 
