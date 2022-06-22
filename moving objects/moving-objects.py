@@ -41,7 +41,7 @@ def main():
             else:
                 xpos -= 1
         if pygame.key.get_pressed()[pygame.K_RIGHT]:  # move to right
-            if xpos == 700:
+            if xpos == 600:
                 NULL
             else:
                 xpos += 1
