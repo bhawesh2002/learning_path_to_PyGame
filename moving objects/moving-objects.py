@@ -12,10 +12,10 @@ width = 600
 window = pygame.display.set_mode((height, width))
 ballon = pygame.image.load(os.path.join(
     "moving objects", "Assets", "ballon.jpg"))
-ballon_resized = pygame.transform.scale(ballon, (100, 100))
 
 
-def draw_screen(xpos, ypos):
+def draw_screen(xpos, ypos, sizex=100, sizey=100):
+    ballon_resized = pygame.transform.scale(ballon, (sizex, sizey))
     window.fill((255, 255, 255))
     window.blit(ballon_resized, (xpos, ypos))
     pygame.display.update()
@@ -28,6 +28,7 @@ def main():
     clock.tick(60)
     xpos = 100
     ypos = 100
+    sizex, sizey = 100, 100
     while(True):
         for event in pygame.event.get():
             # if the user wants to quit either click cross or press 'q'
@@ -54,7 +55,19 @@ def main():
                 NULL
             else:
                 ypos -= 1
-        draw_screen(xpos, ypos)
+        if pygame.key.get_pressed()[pygame.K_m]:  # decrease size
+            if sizex == 0 and sizey == 0:
+                NULL
+            else:
+                sizex -= 1
+                sizey -= 1
+        if pygame.key.get_pressed()[pygame.K_p]:  # increase size
+            if sizex == 500 and sizey == 500:
+                NULL
+            else:
+                sizex += 1
+                sizey += 1
+        draw_screen(xpos, ypos, sizex, sizey)
 
 
 if __name__ == '__main__':
