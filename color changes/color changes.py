@@ -10,7 +10,7 @@ width = 600
 window = pygame.display.set_mode((height, width))
 
 def main():
-    window.fill(242,242,245)
+    window.fill((255,255,255))
 
 
 if __name__ == '__main__':
