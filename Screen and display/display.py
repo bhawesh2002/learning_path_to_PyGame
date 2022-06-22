@@ -10,21 +10,17 @@ width = 600  # set the width of the screen
 logo = pygame.image.load(
     "Screen and Display\logo\display.png")  # load the logo
 
-def draw():
-    
+# create a window of the specified size
+# set the window size and create a resizeable window
+window = pygame.display.set_mode((height, width), pygame.RESIZABLE)
+
+# set the caption of the window
+pygame.display.set_caption("Display Tweaks")
+pygame.display.set_icon(logo)  # set the icon of the window
+
 
 def main():
-    # create a window of the specified size
-    # set the window size and create a resizeable window
-    window = pygame.display.set_mode((height, width), pygame.RESIZABLE)
-
-    # set the caption of the window
-    pygame.display.set_caption("Display Tweaks")
-    pygame.display.set_icon(logo)  # set the icon of the window
-
     while(True):  # infinite game loop
-        fps = pygame.time.Clock()  # create a clock object
-        fps.tick(60)  # set the fps to 60
         pygame.display.update()  # update the display
         for event in pygame.event.get():  # check for events
             if event.type == QUIT:  # if the user clicks the close button
@@ -34,3 +30,10 @@ def main():
             if (event.type == pygame.KEYUP and event.key == pygame.K_f):
                 pygame.display.toggle_fullscreen()  # toggle fullscreen
         window.fill((65, 75, 90))  # fill the window with a color
+
+
+# run the main function only if this module is executed as the main script
+# (if you import this as a module then nothing is executed)
+if __name__ == "__main__":
+    # call the main function
+    main()
