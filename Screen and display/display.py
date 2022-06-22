@@ -1,3 +1,4 @@
+from re import T
 import sys  # for sys.exit()
 import pygame  # for pygame.init()
 from pygame.locals import *  # import the locals from the pygame module
@@ -19,3 +20,5 @@ while(True):  # infinite game loop
         if event.type == QUIT:  # if the user clicks the close button
             pygame.quit()  # quit the pygame module
             sys.exit()  # exit the program
+        if event.type == pygame.KEYUP: # if the user releases the 'up' key
+            pygame.display.toggle_fullscreen() # toggle fullscreen
