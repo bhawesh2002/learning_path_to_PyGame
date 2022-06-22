@@ -10,6 +10,8 @@ width = 600  # set the width of the screen
 logo = pygame.image.load(
     "Screen and Display\logo\display.png")  # load the logo
 
+def draw():
+    
 
 def main():
     # create a window of the specified size
