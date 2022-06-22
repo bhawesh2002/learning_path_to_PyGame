@@ -22,6 +22,7 @@ def draw_screen():
     gola = pygame.draw.circle(window, (155, 255, 255), (400, 300), 50) #draw a circle
     tricone1 = pygame.draw.polygon(window, (215, 110, 200), ((500, 300), (400, 400), (500, 400))) #draw a triangle
     tricone2 = pygame.draw.polygon(window, (215, 110, 200), ((300, 500), (400, 400), (400, 500))) #draw a triangle
+    cahucone = pygame.draw.rect(window, (200, 105, 210), (350, 200, 100, 100)) #draw a rectangle
 
 def main():
     while(True):  # infinite game loop
