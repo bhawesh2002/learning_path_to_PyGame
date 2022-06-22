@@ -32,8 +32,10 @@ def main():
             if (event.type == QUIT or (event.type == pygame.KEYUP and event.key == pygame.K_q)):
                 pygame.quit()
                 sys.exit()
-        xpos += 1
-        ypos += 1
+        if pygame.key.get_pressed()[pygame.K_LEFT]:
+            xpos -= 1
+        if pygame.key.get_pressed()[pygame.K_RIGHT]:
+            xpos += 1
         draw_screen(xpos,ypos)
 
 
