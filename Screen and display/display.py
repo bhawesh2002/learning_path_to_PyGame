@@ -23,9 +23,9 @@ def draw_screen():
     tricone1 = pygame.draw.polygon(window, (215, 110, 200), ((500, 300), (400, 400), (500, 400))) #draw a triangle
     tricone2 = pygame.draw.polygon(window, (215, 110, 200), ((300, 500), (400, 400), (400, 500))) #draw a triangle
     cahucone = pygame.draw.rect(window, (200, 115, 210), (350, 200, 100, 100)) #draw a rectangle
+    pygame.display.update()  # update the display
 def main():
     while(True):  # infinite game loop
-        pygame.display.update()  # update the display
         for event in pygame.event.get():  # check for events
             if event.type == QUIT:  # if the user clicks the close button
                 pygame.quit()  # quit the pygame module
