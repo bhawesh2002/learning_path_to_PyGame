@@ -11,3 +11,7 @@ window = pygame.display.set_mode((height, width))
 
 def main():
     window.fill(242,242,245)
+
+
+if __name__ == '__main__':
+    main()
