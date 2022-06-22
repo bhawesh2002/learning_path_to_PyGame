@@ -10,9 +10,10 @@ height = 800
 width = 600
 window = pygame.display.set_mode((height, width))
 ballon = pygame.image.load(os.path.join("moving objects","Assets","ballon.jpg"))
+ballon_resized = pygame.transform.scale(ballon,(100,100))
 def draw_screen():
     window.fill((255, 255, 255))
-    window.blit(ballon, (100,100))
+    window.blit(ballon_resized, (100,100))
     pygame.display.update()
 
 
