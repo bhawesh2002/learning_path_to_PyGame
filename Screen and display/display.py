@@ -9,12 +9,13 @@ height = 800  # height of the screen
 width = 600  # set the width of the screen
 logo = pygame.image.load(
     "Screen and Display\logo\display.png")  # load the logo
-# create a window of the specified size
-# set the window size and create a resizeable window
 
 
 def main():
+    # create a window of the specified size
+    # set the window size and create a resizeable window
     window = pygame.display.set_mode((height, width), pygame.RESIZABLE)
+
     # set the caption of the window
     pygame.display.set_caption("Display Tweaks")
     pygame.display.set_icon(logo)  # set the icon of the window
