@@ -16,6 +16,8 @@ pygame.display.set_caption("Display Tweaks")  # set the caption of the window
 pygame.display.set_icon(logo)  # set the icon of the window
 
 while(True):  # infinite game loop
+    fps = pygame.time.Clock()  # create a clock object
+    fps.tick(60)  # set the fps to 60
     pygame.display.update()  # update the display
     for event in pygame.event.get():  # check for events
         if event.type == QUIT:  # if the user clicks the close button
