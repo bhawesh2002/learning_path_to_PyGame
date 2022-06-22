@@ -21,7 +21,7 @@ pygame.display.set_icon(logo)  # set the icon of the window
 
 
 def draw_screen():
-    shape = pygame.draw.circle(window, (255, 255, 255), (100, 100), 50)
+    shape = pygame.draw.circle(window, (255, 255, 255), (400, 300), 50)
 
 
 def main():
