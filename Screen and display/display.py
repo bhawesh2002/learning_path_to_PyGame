@@ -1,18 +1,21 @@
-import sys # for sys.exit()
-import pygame # for pygame.init()
-from pygame.locals import * #import the locals from the pygame module
+import sys  # for sys.exit()
+import pygame  # for pygame.init()
+from pygame.locals import *  # import the locals from the pygame module
 
-pygame.init()  #initialize the pygame module
+pygame.init()  # initialize the pygame module
 
-height = 800 #height of the screen
-width = 600 #set the width of the screen
+height = 800  # height of the screen
+width = 600  # set the width of the screen
+logo = pygame.image.load(
+    "Screen and Display\logo\display.png")  # load the logo
+# create a window of the specified size
+pygame.display.set_mode((height, width))
+pygame.display.set_caption("Display Tweaks")  # set the caption of the window
+pygame.display.set_icon(logo)  # set the icon of the window
 
-pygame.display.set_mode((height,width)) #create a window of the specified size
-pygame.display.set_caption("Display Tweaks") #set the caption of the window
-
-while(True): #infinite game loop
-    pygame.display.update() #update the display
-    for event in pygame.event.get(): #check for events
-        if event.type == QUIT: #if the user clicks the close button
-            pygame.quit() # quit the pygame module
-            sys.exit() # exit the program
+while(True):  # infinite game loop
+    pygame.display.update()  # update the display
+    for event in pygame.event.get():  # check for events
+        if event.type == QUIT:  # if the user clicks the close button
+            pygame.quit()  # quit the pygame module
+            sys.exit()  # exit the program
