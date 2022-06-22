@@ -11,12 +11,14 @@ logo = pygame.image.load(
     "Screen and Display\logo\display.png")  # load the logo
 # create a window of the specified size
 # set the window size and create a resizeable window
-window = pygame.display.set_mode((height, width), pygame.RESIZABLE)
-pygame.display.set_caption("Display Tweaks")  # set the caption of the window
-pygame.display.set_icon(logo)  # set the icon of the window
 
 
 def main():
+    window = pygame.display.set_mode((height, width), pygame.RESIZABLE)
+    # set the caption of the window
+    pygame.display.set_caption("Display Tweaks")
+    pygame.display.set_icon(logo)  # set the icon of the window
+
     while(True):  # infinite game loop
         fps = pygame.time.Clock()  # create a clock object
         fps.tick(60)  # set the fps to 60
