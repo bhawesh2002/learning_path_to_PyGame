@@ -1,5 +1,6 @@
-import sys, pygame  # imports the pygame library as module into the program, also imports the sys module to get the exit function
-from pygame.locals import * # imports the pygame.locals module to get the QUIT event
+import sys      #impoirt sys module for system calls
+import pygame  # imports the pygame library as module into the program
+from pygame.locals import *  # imports the pygame.locals module to get the QUIT event
 
 pygame.init()  # function call attempts  to initialise all the pygame  modules
 height = 800  # sets the height of the screen
@@ -13,6 +14,7 @@ while(True):   # infinite loop
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
+            sys.exit()
 
 # Modules that are initialized also usually have a quit() function that will clean up.
 # There is no need to explicitly call these,
