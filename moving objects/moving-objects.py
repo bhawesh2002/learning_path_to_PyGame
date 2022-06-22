@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 import sys  # for sys.exit()
 import os
 from turtle import width  # for os.path.isfile()
@@ -34,13 +35,25 @@ def main():
                 pygame.quit()
                 sys.exit()
         if pygame.key.get_pressed()[pygame.K_LEFT]:  # move to left
-            xpos -= 1
+            if xpos == 0:
+                NULL
+            else:
+                xpos -= 1
         if pygame.key.get_pressed()[pygame.K_RIGHT]:  # move to right
-            xpos += 1
+            if xpos == 700:
+                NULL
+            else:
+                xpos += 1
         if pygame.key.get_pressed()[pygame.K_DOWN]:  # move down
-            ypos += 1
+            if ypos == 500:
+                NULL
+            else:
+                ypos += 1
         if pygame.key.get_pressed()[pygame.K_UP]:  # move up
-            ypos -= 1
+            if ypos == 0:
+                NULL
+            else:
+                ypos -= 1
         draw_screen(xpos, ypos)
 
 
