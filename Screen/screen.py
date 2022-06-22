@@ -1,4 +1,4 @@
-from asyncio.windows_events import NULL
+from asyncio.windows_events import NULL   # for windows
 import pygame  # imports the pygame library as module into the program
 
 pygame.init()  # function call attempts  to initialise all the pygame  modules
