@@ -8,6 +8,7 @@ width = 600  # sets the width of the screen
 window = pygame.display.set_mode((height, width))
 
 while(True):   # infinite loop
+    pygame.display.update()
 
 # Modules that are initialized also usually have a quit() function that will clean up.
 # There is no need to explicitly call these,
