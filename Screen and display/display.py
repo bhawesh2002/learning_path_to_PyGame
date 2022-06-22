@@ -7,8 +7,8 @@ pygame.init()  #initialize the pygame module
 height = 800 #height of the screen
 width = 600 #set the width of the screen
 
-pygame.display.set_mode((height,width))
-pygame.display.set_caption("Display Tweaks")
+pygame.display.set_mode((height,width)) #create a window of the specified size
+pygame.display.set_caption("Display Tweaks") #set the caption of the window
 
 while(True): #infinite game loop
     pygame.display.update() #update the display
