@@ -13,7 +13,8 @@ ballon = pygame.image.load(os.path.join(
     "moving objects", "Assets", "ballon.jpg"))
 ballon_resized = pygame.transform.scale(ballon, (100, 100))
 
-def draw_screen(xpos,ypos):
+
+def draw_screen(xpos, ypos):
     window.fill((255, 255, 255))
     window.blit(ballon_resized, (xpos, ypos))
     pygame.display.update()
@@ -32,11 +33,15 @@ def main():
             if (event.type == QUIT or (event.type == pygame.KEYUP and event.key == pygame.K_q)):
                 pygame.quit()
                 sys.exit()
-        if pygame.key.get_pressed()[pygame.K_LEFT]:
+        if pygame.key.get_pressed()[pygame.K_LEFT]:  # move to left
             xpos -= 1
-        if pygame.key.get_pressed()[pygame.K_RIGHT]:
+        if pygame.key.get_pressed()[pygame.K_RIGHT]:  # move to right
             xpos += 1
-        draw_screen(xpos,ypos)
+        if pygame.key.get_pressed()[pygame.K_DOWN]:  # move down
+            ypos += 1
+        if pygame.key.get_pressed()[pygame.K_UP]:  # move up
+            ypos -= 1
+        draw_screen(xpos, ypos)
 
 
 if __name__ == '__main__':
