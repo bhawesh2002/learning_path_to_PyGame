@@ -1,4 +1,4 @@
-import pygame  # imports the pygame library as module into the program
+import sys, pygame  # imports the pygame library as module into the program, also imports the sys module to get the exit function
 
 pygame.init()  # function call attempts  to initialise all the pygame  modules
 height = 800
