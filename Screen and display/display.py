@@ -7,6 +7,8 @@ pygame.init()  #initialize the pygame module
 height = 800 #height of the screen
 width = 600 #set the width of the screen
 
+pygame.display.set_mode((height,width))
+
 while(True): #infinite game loop
     pygame.display.update() #update the display
     for event in pygame.event.get(): #check for events
