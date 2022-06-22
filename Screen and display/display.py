@@ -20,5 +20,5 @@ while(True):  # infinite game loop
         if event.type == QUIT:  # if the user clicks the close button
             pygame.quit()  # quit the pygame module
             sys.exit()  # exit the program
-        if event.type == pygame.KEYUP: # if the user releases the 'up' key
-            pygame.display.toggle_fullscreen() # toggle fullscreen
+        if (event.type == pygame.KEYUP and event.key == pygame.K_f):  # if the user releases the 'f' key
+            pygame.display.toggle_fullscreen()  # toggle fullscreen
