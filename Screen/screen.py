@@ -1,8 +1,8 @@
 import sys, pygame  # imports the pygame library as module into the program, also imports the sys module to get the exit function
 
 pygame.init()  # function call attempts  to initialise all the pygame  modules
-height = 800
-width = 600
+height = 800  # sets the height of the screen
+width = 600  # sets the width of the screen
 
 # creates a window of the specified size
 window = pygame.display.set_mode((height, width))
