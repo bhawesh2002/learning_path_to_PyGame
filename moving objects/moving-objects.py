@@ -22,6 +22,8 @@ def draw_screen(xpos,ypos):
 
 
 def main():
+    clock = pygame.time.Clock()
+    clock.tick(60)
     xpos = 100
     ypos = 100
     while(True):
