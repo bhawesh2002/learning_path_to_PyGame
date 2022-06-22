@@ -22,3 +22,4 @@ while(True):  # infinite game loop
             sys.exit()  # exit the program
         if (event.type == pygame.KEYUP and event.key == pygame.K_f):  # if the user releases the 'f' key
             pygame.display.toggle_fullscreen()  # toggle fullscreen
+    window.fill((65,75,90))  # fill the window with a color
