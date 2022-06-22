@@ -11,11 +11,9 @@ width = 600
 window = pygame.display.set_mode((height, width))
 beach_ball = pygame.image.load(os.path.join(
     "color changes", "Assets", "beach-ball.jpg"))
-
-
 def draw_screen(xpos, ypos, sizex=150, sizey=150):
-    window.fill((255, 255, 255))
     beach_ball_resized = pygame.transform.scale(beach_ball, (sizex, sizey))
+    beach_ball.set_colorkey((255, 255, 255))
     window.blit(beach_ball_resized, (xpos, ypos))
     pygame.display.update()
     pygame.display.flip()
