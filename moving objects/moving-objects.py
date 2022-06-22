@@ -12,25 +12,27 @@ window = pygame.display.set_mode((height, width))
 ballon = pygame.image.load(os.path.join(
     "moving objects", "Assets", "ballon.jpg"))
 ballon_resized = pygame.transform.scale(ballon, (100, 100))
-pos = xpos, ypos = 100, 100
 
-
-def draw_screen():
+def draw_screen(xpos,ypos):
     window.fill((255, 255, 255))
-    window.blit(ballon_resized, (pos))
+    window.blit(ballon_resized, (xpos, ypos))
     pygame.display.update()
     # The full screen update is done using pygame.display.flip().
     pygame.display.flip()
 
 
 def main():
+    xpos = 100
+    ypos = 100
     while(True):
         for event in pygame.event.get():
             # if the user wants to quit either click cross or press 'q'
             if (event.type == QUIT or (event.type == pygame.KEYUP and event.key == pygame.K_q)):
                 pygame.quit()
                 sys.exit()
-        draw_screen()
+        xpos += 1
+        ypos += 1
+        draw_screen(xpos,ypos)
 
 
 if __name__ == '__main__':
