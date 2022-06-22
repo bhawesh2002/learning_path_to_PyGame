@@ -12,6 +12,6 @@ window = pygame.display.set_mode((height, width))
 
 while(True):
     for event in pygame.event.get():
-        if event.type == QUIT:
+        if (event.type == QUIT or (event.type == pygame.KEYUP and event.key ==  pygame.K_q)):
             pygame.quit()
             sys.exit()
