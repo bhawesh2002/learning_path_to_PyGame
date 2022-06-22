@@ -1,5 +1,6 @@
 from re import T
-import sys  # for sys.exit()
+import sys
+from turtle import circle  # for sys.exit()
 import pygame  # for pygame.init()
 from pygame.locals import *  # import the locals from the pygame module
 
@@ -19,6 +20,10 @@ pygame.display.set_caption("Display Tweaks")
 pygame.display.set_icon(logo)  # set the icon of the window
 
 
+def draw_screen():
+    shape = pygame.draw.circle(window, (255, 255, 255), (100, 100), 50)
+
+
 def main():
     while(True):  # infinite game loop
         pygame.display.update()  # update the display
@@ -30,6 +35,7 @@ def main():
             if (event.type == pygame.KEYUP and event.key == pygame.K_f):
                 pygame.display.toggle_fullscreen()  # toggle fullscreen
         window.fill((65, 75, 90))  # fill the window with a color
+        draw_screen()
 
 
 # run the main function only if this module is executed as the main script
