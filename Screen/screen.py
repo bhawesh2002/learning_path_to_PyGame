@@ -11,6 +11,8 @@ window = pygame.display.set_mode((height, width))
 while(True):   # infinite loop
     pygame.display.update()
     for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
 
 # Modules that are initialized also usually have a quit() function that will clean up.
 # There is no need to explicitly call these,
