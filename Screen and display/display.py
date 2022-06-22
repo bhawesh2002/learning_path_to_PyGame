@@ -19,7 +19,8 @@ pygame.display.set_icon(logo)  # set the icon of the window
 
 
 def draw_screen():
-    shape = pygame.draw.circle(window, (255, 255, 255), (400, 300), 50)
+    gola = pygame.draw.circle(window, (255, 255, 255), (400, 300), 50)
+    tricone = pygame.draw.polygon(window, (255, 255, 255), ((500, 300), (400, 400), (500, 400)))
 
 
 def main():
