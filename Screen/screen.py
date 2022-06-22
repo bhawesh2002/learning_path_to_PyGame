@@ -5,3 +5,5 @@ height = 800
 width = 600
 
 window = pygame.display.set_mode((height,width))  #creates a window of the specified size
+
+pygame.quit()   #quit all the initialized modules when python finishes running
