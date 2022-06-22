@@ -1,6 +1,4 @@
-from re import T
 import sys
-from turtle import circle  # for sys.exit()
 import pygame  # for pygame.init()
 from pygame.locals import *  # import the locals from the pygame module
 
