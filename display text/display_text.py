@@ -17,7 +17,13 @@ def draw_screen():
 
 
 def main():
-    draw_screen()
+    while(True):
+        for event in pygame.event.get():
+            if (event.type == QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q)):
+                pygame.quit()
+                sys.exit()
+        draw_screen()
+
 
 if __name__ == "__main__":
     main()
