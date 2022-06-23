@@ -29,8 +29,8 @@ def main():
     sizex = 150
     sizey = 150
     bgd_image = pygame.image.load(os.path.join(
-        "color changes", "Assets", "white_screen.jpg"))
-    bgd_image_scaled = pygame.transform.scale(bgd_image,(800,600))
+        "color changes", "Assets", "white_screen.jpg")).convert()
+    bgd_image_scaled = pygame.transform.scale(bgd_image, (800, 600))
     while(True):
         for event in pygame.event.get():
             if (event.type == QUIT or (event.type == pygame.KEYUP and event.key == pygame.K_q)):
@@ -69,13 +69,22 @@ def main():
                 sizex += 1
                 sizey += 1
         if(pygame.key.get_pressed()[pygame.K_y]):
-            window.fill((255, 235, 20))
+            bgd_image = pygame.image.load(os.path.join(
+                "color changes", "Assets", "yellow_screen.jpg"))
+            bgd_image_scaled = pygame.transform.scale(bgd_image, (800, 600))
         if(pygame.key.get_pressed()[pygame.K_r]):
-            window.fill((255, 0, 0))
+            bgd_image = pygame.image.load(os.path.join(
+                "color changes", "Assets", "red_screen.jpg"))
+            bgd_image_scaled = pygame.transform.scale(bgd_image, (800, 600))
         if(pygame.key.get_pressed()[pygame.K_b]):
-            window.fill((0, 0, 255))
+            bgd_image = pygame.image.load(os.path.join(
+                "color changes", "Assets", "blue_screen.jpg"))
+            bgd_image_scaled = pygame.transform.scale(bgd_image, (800, 600))
         if (pygame.key.get_pressed()[pygame.K_w]):
-            window.fill((255, 255, 255))
+
+            bgd_image = pygame.image.load(os.path.join(
+                "color changes", "Assets", "white_screen.jpg")).convert()
+            bgd_image_scaled = pygame.transform.scale(bgd_image, (800, 600))
         draw_screen(xpos, ypos, bgd_image_scaled, sizex, sizey)
 
 
