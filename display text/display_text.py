@@ -13,6 +13,7 @@ window = pygame.display.set_mode((height, width), pygame.RESIZABLE)
 
 def main():
     window.fill((255, 255, 255))
+    pygame.display.update()
 
 
 if __name__ == "__main__":
