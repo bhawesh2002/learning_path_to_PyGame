@@ -17,7 +17,7 @@ def draw_screen():
 
 
 def main():
-
+    draw_screen()
 
 if __name__ == "__main__":
     main()
