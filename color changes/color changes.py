@@ -10,7 +10,7 @@ height = 800
 width = 600
 window = pygame.display.set_mode((height, width))
 beach_ball = pygame.image.load(os.path.join(
-    "color changes", "Assets", "beach-ball.jpg"))
+    "color changes", "Assets", "beach-ball.jpg")).convert()
 
 
 def draw_screen(xpos, ypos, sizex=150, sizey=150):
