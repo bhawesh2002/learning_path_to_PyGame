@@ -11,9 +11,12 @@ width = 600
 window = pygame.display.set_mode((height, width), pygame.RESIZABLE)
 
 
-def main():
+def draw_screen():
     window.fill((255, 255, 255))
     pygame.display.update()
+
+
+def main():
 
 
 if __name__ == "__main__":
