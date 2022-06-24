@@ -34,8 +34,8 @@ while(True):
             sys.exit()
     if(pygame.key.get_pressed()[pygame.K_RIGHT]):
         x_dir += 5
-        if(x_dir > 850):
-            x_dir = 850
+        if(x_dir > 885):
+            x_dir = 885
     if (pygame.key.get_pressed()[pygame.K_LEFT]):
         x_dir -= 5
         if(x_dir < 0):
@@ -44,7 +44,7 @@ while(True):
         y_dir -= 5
         if(y_dir < 0):
             y_dir = 0
-    if(y_dir < height - 150):
+    if(y_dir < height - 115):
         y_dir += 3
         if(y_dir < height/2):
             y_dir += 1
