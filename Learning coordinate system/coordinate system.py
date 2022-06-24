@@ -10,8 +10,10 @@ width = 800
 window = pygame.display.set_mode((width,height), pygame.RESIZABLE)
 pygame.display.set_caption("Coordinate System")
 
-def main():
+def draw_screen():
     pygame.display.update()
+
+def main():
     while(True):
         for event in pygame.event.get():
             if (event.type == QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q)):
