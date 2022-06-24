@@ -31,8 +31,8 @@ while(True):
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
             pygame.quit()
             sys.exit()
-        if(pygame.key.get_pressed()[pygame.K_RIGHT]):
-            x_dir += 10
-        if (pygame.key.get_pressed()[pygame.K_LEFT]):
-            x_dir -= 10
-        draw_screen()
+    if(pygame.key.get_pressed()[pygame.K_RIGHT]):
+            x_dir += 5
+    if (pygame.key.get_pressed()[pygame.K_LEFT]):
+            x_dir -= 5
+    draw_screen()
