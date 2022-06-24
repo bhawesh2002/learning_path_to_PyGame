@@ -1,3 +1,4 @@
+import os
 import sys
 import pygame
 from pygame.locals import *
@@ -7,7 +8,7 @@ pygame.init()
 position = [1000,600]
 window  = pygame.display.set_mode(position)
 pygame.display.set_caption("Collision")
-
+mouse = pygame.image.load(os.path.join('collision','Assets','mouse.png'))
 def main():
     window.fill((255,255,255))
     pygame.display.update()
