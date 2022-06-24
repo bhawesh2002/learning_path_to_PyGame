@@ -13,14 +13,17 @@ soccer_ball = pygame.image.load(os.path.join(
     'jumping obj', 'Assets', 'soccer-ball.png')).convert()
 soccer_ball_scaled = pygame.transform.scale(soccer_ball, (110, 110))
 soccer_ball_rect = soccer_ball_scaled.get_rect()
-soccer_ball_scaled.set_colorkey((255,255,255))
+soccer_ball_scaled.set_colorkey((255, 255, 255))
 x_dir = soccer_ball_rect.x
 y_dir = soccer_ball_rect.y
-background = pygame.image.load(os.path.join('jumping obj', 'Assets', 'background.jpg'))
+background = pygame.image.load(os.path.join(
+    'jumping obj', 'Assets', 'background.jpg'))
 background_scaled = pygame.transform.scale(background, (width, height))
+
+
 def draw_screen():
     window.fill((255, 255, 255))  # fill the screen with a light green color
-    window.blit(background_scaled, (0,0))
+    window.blit(background_scaled, (0, 0))
     window.blit(soccer_ball_scaled, (x_dir, y_dir))
     pygame.display.update()
     pygame.display.flip()
