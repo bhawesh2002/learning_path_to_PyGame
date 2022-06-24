@@ -7,6 +7,7 @@ pygame.init()
 
 height = 600
 width = 1000
+momentum = 2
 clock = pygame.time.Clock()
 window = pygame.display.set_mode((width, height))
 soccer_ball = pygame.image.load(os.path.join(
@@ -48,7 +49,7 @@ while(True):
         if(y_dir < 0):
             y_dir = 0
     if(y_dir < height - 115):
-        y_dir += 3
-        if(y_dir < height/2):
-            y_dir += 1
+        y_dir += momentum
+        if(y_dir > height/2):
+            momentum += 1
     draw_screen()
