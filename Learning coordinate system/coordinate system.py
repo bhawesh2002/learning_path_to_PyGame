@@ -11,6 +11,7 @@ window = pygame.display.set_mode((width,height), pygame.RESIZABLE)
 pygame.display.set_caption("Coordinate System")
 
 def draw_screen():
+    window.fill((255,255,255))
     pygame.display.update()
 
 def main():
