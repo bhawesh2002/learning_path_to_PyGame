@@ -37,6 +37,6 @@ while(True):
         x_dir -= 5
     if(pygame.key.get_pressed()[pygame.K_UP]):
         y_dir -= 5
-    if(pygame.key.get_pressed()[pygame.K_DOWN]):
+    if(y_dir < height - 150):
         y_dir += 5
     draw_screen()
