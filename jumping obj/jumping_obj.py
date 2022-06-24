@@ -26,3 +26,4 @@ while(True):
             sys.exit()
         if(pygame.key.get_pressed()[pygame.K_RIGHT]):
             x_dir += 10
+    pygame.display.flip()
