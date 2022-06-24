@@ -19,6 +19,7 @@ def main():
             if (event.type == QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q)):
                 pygame.quit()
                 sys.exit
+        draw_screen()
 
 
 
