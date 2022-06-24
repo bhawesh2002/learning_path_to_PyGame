@@ -32,7 +32,11 @@ while(True):
             pygame.quit()
             sys.exit()
     if(pygame.key.get_pressed()[pygame.K_RIGHT]):
-            x_dir += 5
+        x_dir += 5
     if (pygame.key.get_pressed()[pygame.K_LEFT]):
-            x_dir -= 5
+        x_dir -= 5
+    if(pygame.key.get_pressed()[pygame.K_UP]):
+        y_dir -= 5
+    if(pygame.key.get_pressed()[pygame.K_DOWN]):
+        y_dir += 5
     draw_screen()
