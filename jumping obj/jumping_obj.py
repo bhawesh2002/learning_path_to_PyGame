@@ -6,9 +6,9 @@ from pygame.locals import *
 pygame.init()
 
 height = 600
-width = 800
+width = 1000
 clock = pygame.time.Clock()
-window = pygame.display.set_mode((width, height), pygame.RESIZABLE)
+window = pygame.display.set_mode((width, height))
 soccer_ball = pygame.image.load(os.path.join(
     'jumping obj', 'Assets', 'soccer-ball.jpg')).convert()
 soccer_ball_scaled = pygame.transform.scale(soccer_ball, (150, 150))
@@ -27,10 +27,12 @@ def draw_screen():
 
 while(True):
     clock.tick(60)
-
     for event in pygame.event.get():
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
             pygame.quit()
             sys.exit()
         if(pygame.key.get_pressed()[pygame.K_RIGHT]):
             x_dir += 10
+        if (pygame.key.get_pressed()[pygame.K_LEFT]):
+            x_dir -= 10
+        draw_screen()
