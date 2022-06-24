@@ -15,6 +15,8 @@ def draw_screen():
     pygame.display.update()
 
 def main():
+    clock = pygame.time.Clock()
+    clock.tick(60)
     while(True):
         for event in pygame.event.get():
             if (event.type == QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q)):
