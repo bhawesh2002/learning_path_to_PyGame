@@ -19,8 +19,8 @@ def main():
         for event in pygame.event.get():
             if (event.type == QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q)):
                 pygame.quit()
-                sys.exit
-        draw_screen()
+                sys.exit()
+            draw_screen()
 
 
 
