@@ -1,3 +1,4 @@
+from calendar import c
 import os
 import sys
 import pygame
@@ -26,7 +27,7 @@ def main():
                 x_pos = 0
         if (pygame.key.get_pressed()[pygame.K_RIGHT]):
             x_pos += 1
-            if(x_pos > 1000):
-                x_pos = 1000
+            if(x_pos > 845):
+                x_pos = 845
 if __name__ == "__main__":
     main()
