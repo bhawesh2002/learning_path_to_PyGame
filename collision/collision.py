@@ -16,7 +16,8 @@ def main():
     while True:
         window.fill((255,255,255))
         window.blit(mouse_scaled,(x_pos,y_pos))
-        pygame.display.update()
+        gola = pygame.draw.circle(window, (155, 205, 15), (500,550), 50) #draw a circle
+        blocked = False
         for event in pygame.event.get():
             if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
                 pygame.quit()
@@ -27,7 +28,16 @@ def main():
                 x_pos = 0
         if (pygame.key.get_pressed()[pygame.K_RIGHT]):
             x_pos += 1
+            print(x_pos)
             if(x_pos > 845):
                 x_pos = 845
+            if(x_pos >= 315):
+                blocked = True
+                x_pos = 315
+                font = pygame.font.SysFont("comicsansms", 30)
+                text = font.render("Blocked", True, (255, 0, 0))
+                window.blit(text, (500, 500))
+        pygame.display.flip()
+
 if __name__ == "__main__":
     main()
