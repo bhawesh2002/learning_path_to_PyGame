@@ -6,7 +6,7 @@ from pygame.locals import *
 pygame.init()
 
 height, width = 600, 800
-
+velocity = 3
 window = pygame.display.set_mode((width, height))
 mouse = pygame.image.load(os.path.join('Jump on Collision', 'Assets', 'mouse.png')).convert()
 mouse_scaled = pygame.transform.scale(mouse,(150,100))
@@ -18,12 +18,12 @@ while True:
             sys.exit()
     if (pygame.key.get_pressed()[pygame.K_RIGHT]):
         if(x_pos < 650):
-            x_pos += 3
+            x_pos += velocity
         else:
             x_pos = 650
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > 0):
-            x_pos -= 3
+            x_pos -= velocity
         else:
             x_pos = 0
     window.fill((255,255,255))
