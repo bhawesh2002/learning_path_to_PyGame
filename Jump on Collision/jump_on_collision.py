@@ -31,6 +31,7 @@ while True:
         else:
             window.blit(reached, (350, height/2))
             x_pos = 650
+            pygame.display.update()
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > 0):
             x_pos -= velocity
