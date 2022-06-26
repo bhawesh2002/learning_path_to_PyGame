@@ -10,14 +10,14 @@ width = 1000
 clock = pygame.time.Clock()
 window = pygame.display.set_mode((width, height))
 soccer_ball = pygame.image.load(os.path.join(
-    'jumping obj', 'Assets', 'soccer-ball.png')).convert()
+    'add_gravity', 'Assets', 'soccer-ball.png')).convert()
 soccer_ball_scaled = pygame.transform.scale(soccer_ball, (110, 110))
 soccer_ball_rect = soccer_ball_scaled.get_rect()
 soccer_ball_scaled.set_colorkey((255, 255, 255))
 x_dir = soccer_ball_rect.x
 y_dir = soccer_ball_rect.y
 background = pygame.image.load(os.path.join(
-    'jumping obj', 'Assets', 'background.jpg'))
+    'add_gravity', 'Assets', 'background.jpg'))
 background_scaled = pygame.transform.scale(background, (width, height))
 
 
