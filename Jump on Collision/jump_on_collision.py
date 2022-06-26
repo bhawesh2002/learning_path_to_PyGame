@@ -21,6 +21,11 @@ while True:
             x_pos += 3
         else:
             x_pos = 650
+    if(pygame.key.get_pressed()[K_LEFT]):
+        if(x_pos > 0):
+            x_pos -= 3
+        else:
+            x_pos = 0
     window.fill((255,255,255))
     window.blit(mouse_scaled,(x_pos,y_pos))
     pygame.display.update()
