@@ -11,6 +11,8 @@ window = pygame.display.set_mode((width, height))
 mouse = pygame.image.load(os.path.join('Jump on Collision', 'Assets', 'mouse.png')).convert()
 mouse_scaled = pygame.transform.scale(mouse,(150,100))
 x_pos, y_pos = 0,490
+font = pygame.font.SysFont('Arial', 30)
+collide = font.render('Collision!', True, (255, 0, 0))
 while True:
     for event in pygame.event.get():
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
@@ -37,4 +39,5 @@ while True:
                 y_pos = 200
     window.fill((255,255,255))
     window.blit(mouse_scaled,(x_pos,y_pos))
+    obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
     pygame.display.update()
