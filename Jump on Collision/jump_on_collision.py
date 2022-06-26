@@ -15,3 +15,4 @@ while True:
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
             pygame.quit()
             sys.exit()
+    window.fill((255,255,255))
