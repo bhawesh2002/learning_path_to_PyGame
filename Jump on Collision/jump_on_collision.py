@@ -7,7 +7,7 @@ pygame.init()
 
 height, width = 600, 800
 
-window = pygame.display.set_mode(width, height)
+window = pygame.display.set_mode((width, height))
 
 while True:
     pygame.display.update()
