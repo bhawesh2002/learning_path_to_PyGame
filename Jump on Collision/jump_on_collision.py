@@ -17,10 +17,10 @@ while True:
             pygame.quit()
             sys.exit()
     if (pygame.key.get_pressed()[pygame.K_RIGHT]):
-        if(x_pos < 750):
+        if(x_pos < 650):
             x_pos += 3
         else:
-            x_pos = 750
+            x_pos = 650
     window.fill((255,255,255))
     window.blit(mouse_scaled,(x_pos,y_pos))
     pygame.display.update()
