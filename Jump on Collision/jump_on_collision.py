@@ -19,8 +19,13 @@ while True:
             pygame.quit()
             sys.exit()
     if (pygame.key.get_pressed()[pygame.K_RIGHT]):
+        print(x_pos)
         if(x_pos < 650):
             x_pos += velocity
+            if(x_pos >= 210):
+                window.blit(collide, (350, height/2))
+                x_pos = 210
+                pygame.display.update()
         else:
             x_pos = 650
     if(pygame.key.get_pressed()[K_LEFT]):
