@@ -9,7 +9,7 @@ height, width = 600, 800
 
 window = pygame.display.set_mode((width, height))
 mouse = pygame.image.load(os.path.join('Jump on Collision', 'Assets', 'mouse.png')).convert()
-mouse_scaled = pygame.transform.scale((150,150))
+mouse_scaled = pygame.transform.scale(mouse,(150,100))
 while True:
     pygame.display.update()
     for event in pygame.event.get():
@@ -17,3 +17,4 @@ while True:
             pygame.quit()
             sys.exit()
     window.fill((255,255,255))
+    window.blit(mouse_scaled,(0,490))
