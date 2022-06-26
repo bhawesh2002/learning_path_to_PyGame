@@ -26,6 +26,11 @@ while True:
             x_pos -= velocity
         else:
             x_pos = 0
+    if(pygame.key.get_pressed()[K_UP]):
+        if(y_pos > height - 300):
+            y_pos -= velocity
+        else:
+            y_pos = height - 300
     window.fill((255,255,255))
     window.blit(mouse_scaled,(x_pos,y_pos))
     pygame.display.update()
