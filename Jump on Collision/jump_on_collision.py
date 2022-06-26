@@ -13,6 +13,7 @@ mouse_scaled = pygame.transform.scale(mouse,(150,100))
 x_pos, y_pos = 0,490
 font = pygame.font.SysFont('Arial', 30)
 collide = font.render('Collision!', True, (255, 0, 0))
+reached = font.render('Reached!', True, (0, 255, 0))
 while True:
     for event in pygame.event.get():
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
@@ -23,10 +24,12 @@ while True:
         if(x_pos < 650):
             x_pos += velocity
             if(x_pos >= 210):
-                window.blit(collide, (350, height/2))
-                x_pos = 210
-                pygame.display.update()
+                if(y_pos > 350):
+                    window.blit(collide, (350, height/2))
+                    x_pos = 210
+                    pygame.display.update()
         else:
+            window.blit(reached, (350, height/2))
             x_pos = 650
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > 0):
