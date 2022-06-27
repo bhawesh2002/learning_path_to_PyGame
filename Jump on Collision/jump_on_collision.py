@@ -42,7 +42,6 @@ while True:
         else:
             x_pos = 0
     if(y_pos >= 0):
-        print(y_pos)
         if(y_pos <= 490):
             y_pos += 1
         if(pygame.key.get_pressed()[K_UP]):
@@ -53,4 +52,5 @@ while True:
     window.fill((255,255,255))
     window.blit(mouse_scaled,(x_pos,y_pos))
     obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
+    print(obj.width)
     pygame.display.update()
