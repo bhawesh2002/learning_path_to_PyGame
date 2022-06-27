@@ -15,11 +15,15 @@ font = pygame.font.SysFont('Arial', 50)
 collide = font.render('Collision!', True, (255, 0, 0))
 reached = font.render('Reached!', True, (0, 255, 0))
 obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
+pygame.display.flip()
 while True:
+    window.fill((255,255,255))
     for event in pygame.event.get():
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
             pygame.quit()
             sys.exit()
+    obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
+    pygame.display.flip()
     if (pygame.key.get_pressed()[pygame.K_RIGHT]):
         if(x_pos < 650):
             x_pos += velocity
@@ -50,6 +54,5 @@ while True:
                 y_pos -= velocity
             else:
                 y_pos = 200
-    window.fill((255,255,255))
     window.blit(mouse_scaled,(x_pos,y_pos))
     pygame.display.update()
