@@ -11,7 +11,7 @@ window = pygame.display.set_mode((width, height))
 mouse = pygame.image.load(os.path.join('Jump on Collision', 'Assets', 'mouse.png')).convert()
 mouse_scaled = pygame.transform.scale(mouse,(150,100))
 x_pos, y_pos = 0,490
-font = pygame.font.SysFont('Arial', 30)
+font = pygame.font.SysFont('Arial', 50)
 collide = font.render('Collision!', True, (255, 0, 0))
 reached = font.render('Reached!', True, (0, 255, 0))
 while True:
@@ -24,7 +24,7 @@ while True:
         if(x_pos < 650):
             x_pos += velocity
             if(x_pos >= 210 and x_pos <= 450):
-                if(y_pos > 350):
+                if(y_pos > 420):
                     window.blit(collide, (350, height/2))
                     x_pos = 210
                     pygame.display.update()
@@ -36,7 +36,7 @@ while True:
         if(x_pos > 0):
             x_pos -= velocity
             if(x_pos <=450 and x_pos >= 210):
-                if(y_pos > 350):
+                if(y_pos > 420):
                     window.blit(collide, (350, height/2))
                     x_pos = 450
                     pygame.display.update()
