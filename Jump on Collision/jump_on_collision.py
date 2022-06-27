@@ -7,6 +7,7 @@ pygame.init()
 
 height, width = 600, 800
 velocity = 3
+clock = pygame.time.Clock()
 window = pygame.display.set_mode((width, height))
 mouse = pygame.image.load(os.path.join('Jump on Collision', 'Assets', 'mouse.png')).convert()
 mouse_scaled = pygame.transform.scale(mouse,(150,100))
@@ -17,6 +18,7 @@ reached = font.render('Reached!', True, (0, 255, 0))
 obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
 pygame.display.flip()
 while True:
+    clock.tick(60)
     window.fill((255,255,255))
     for event in pygame.event.get():
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
