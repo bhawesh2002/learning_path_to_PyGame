@@ -26,4 +26,5 @@ while True:  # loop forever
         if(x_pos < dimensions.topright[0]):  # if the ball is not at the right edge of the screen
             x_pos += 1  # move the ball to the right
         else:  # if the ball is at the right edge of the screen
-            x_pos = dimensions.width  # set the ball to the right edge of the screen
+            x_pos = dimensions.topright[0]  # set the ball to the right edge of the screen
+    
