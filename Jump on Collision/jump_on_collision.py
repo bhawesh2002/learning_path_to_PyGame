@@ -19,12 +19,13 @@ obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
 pygame.display.flip()
 while True:
     clock.tick(60)
-    window.fill((255,255,255))
     for event in pygame.event.get():
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
             pygame.quit()
             sys.exit()
+    window.fill((255,255,255))
     obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
+    window.blit(mouse_scaled,(x_pos,y_pos))
     pygame.display.flip()
     if (pygame.key.get_pressed()[pygame.K_RIGHT]):
         if(x_pos < 650):
@@ -56,5 +57,3 @@ while True:
                 y_pos -= velocity
             else:
                 y_pos = 200
-    window.blit(mouse_scaled,(x_pos,y_pos))
-    pygame.display.update()
