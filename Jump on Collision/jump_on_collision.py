@@ -14,6 +14,7 @@ x_pos, y_pos = 0,490
 font = pygame.font.SysFont('Arial', 50)
 collide = font.render('Collision!', True, (255, 0, 0))
 reached = font.render('Reached!', True, (0, 255, 0))
+obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
 while True:
     for event in pygame.event.get():
         if (event.type == QUIT or (event.type == KEYDOWN and event.key == K_q)):
@@ -51,6 +52,4 @@ while True:
                 y_pos = 200
     window.fill((255,255,255))
     window.blit(mouse_scaled,(x_pos,y_pos))
-    obj = pygame.draw.circle(window, (255,0,0), (400,550), 50)
-    print(obj.width)
     pygame.display.update()
