@@ -20,7 +20,6 @@ while True:
             pygame.quit()
             sys.exit()
     if (pygame.key.get_pressed()[pygame.K_RIGHT]):
-        print(x_pos)
         if(x_pos < 650):
             x_pos += velocity
             if(x_pos >= 210 and x_pos <= 450):
@@ -43,6 +42,7 @@ while True:
         else:
             x_pos = 0
     if(y_pos >= 0):
+        print(y_pos)
         if(y_pos <= 490):
             y_pos += 1
         if(pygame.key.get_pressed()[K_UP]):
