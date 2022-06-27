@@ -32,3 +32,13 @@ while True:  # loop forever
             x_pos -= 1
         else:
             x_pos = dimensions.topleft[0]
+    if(pygame.key.get_pressed()[K_DOWN]):
+        if(y_pos < dimensions.bottomleft[1]):
+            y_pos += 1
+        else:
+            y_pos = dimensions.bottomleft[1]
+    if(pygame.key.get_pressed()[K_UP]):
+        if(y_pos > dimensions.topleft[1]):
+            y_pos -= 1
+        else:
+            y_pos = dimensions.topleft[1]
