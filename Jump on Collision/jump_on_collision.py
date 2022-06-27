@@ -46,7 +46,6 @@ while True:
         if(y_pos <= 490):
             y_pos += 1
         if(pygame.key.get_pressed()[K_UP]):
-            print(y_pos)
             if(y_pos > 200):
                 y_pos -= velocity
             else:
