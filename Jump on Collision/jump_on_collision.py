@@ -23,7 +23,7 @@ while True:
         print(x_pos)
         if(x_pos < 650):
             x_pos += velocity
-            if(x_pos >= 210):
+            if(x_pos >= 210 and x_pos <= 450):
                 if(y_pos > 350):
                     window.blit(collide, (350, height/2))
                     x_pos = 210
@@ -35,6 +35,11 @@ while True:
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > 0):
             x_pos -= velocity
+            if(x_pos <=450 and x_pos >= 210):
+                if(y_pos > 350):
+                    window.blit(collide, (350, height/2))
+                    x_pos = 450
+                    pygame.display.update()
         else:
             x_pos = 0
     if(y_pos >= 0):
