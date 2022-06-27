@@ -7,4 +7,11 @@ pygame.init()
 
 width,height = 800,600
 
-window = pygame.display.init((width,height))
+window = pygame.display.set_mode((width,height))
+
+while True:
+    pygame.display.update()
+    for event in pygame.event.get():
+        if event.type == QUIT or (event.type == KEYDOWN and event.key == K_q):
+            pygame.quit()
+            sys.exit()
