@@ -14,6 +14,6 @@ while True:
     window.fill((0,0,0))
     pygame.display.update()
     for event in pygame.event.get():
-        if event.type == QUIT or (event.type == KEYDOWN or pygame.key == K_q):
+        if event.type == QUIT or (event.type == KEYDOWN and event.key == K_q):
             pygame.quit()
             sys.exit()
