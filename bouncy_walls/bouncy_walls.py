@@ -10,7 +10,7 @@ width, height = 800, 600  # set the width and height of the screen
 window = pygame.display.set_mode((width, height))  # create the window
 dimensions = window.get_rect()  # get the dimensions of the window
 x_pos = dimensions.centerx  # set the x position of the ball
-y_pos = dimensions.centerx  # set the y position of the ball
+y_pos = dimensions.centery  # set the y position of the ball
 radius = 25
 while True:  # loop forever
     window.fill((0, 0, 0))  # fill the window with black
