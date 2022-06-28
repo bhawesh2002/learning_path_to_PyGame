@@ -1,6 +1,4 @@
 import sys  # for sys.exit()
-import os
-from xml.dom.minidom import DOMImplementation  # for os.path.join()
 import pygame  # import the pygame module
 # import the pygame.locals for easier access to key presses and mouse positions
 from pygame.locals import *
