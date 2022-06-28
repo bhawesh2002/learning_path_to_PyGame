@@ -1,5 +1,6 @@
 import sys  # for sys.exit()
-import os  # for os.path.join()
+import os
+from xml.dom.minidom import DOMImplementation  # for os.path.join()
 import pygame  # import the pygame module
 # import the pygame.locals for easier access to key presses and mouse positions
 from pygame.locals import *
@@ -27,13 +28,18 @@ while True:  # loop forever
         elif(x_pos == dimensions.topright[0]):
             while(x_pos != dimensions.centerx):
                 x_pos -= 1
+                window.fill((0, 0, 0))
                 ball = pygame.draw.circle(window, (22, 255, 22), (x_pos, y_pos), 25)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > dimensions.topleft[0]):
             x_pos -= 1
-        else:
-            x_pos = dimensions.topleft[0]
+        elif(x_pos == dimensions.topleft[0]):
+            while(x_pos != dimensions.centerx):
+                x_pos += 1
+                window.fill((0,0,0))
+                ball = pygame.draw.circle(window, (22, 255, 22), (x_pos, y_pos), 25)
+                pygame.display.update()
     if(pygame.key.get_pressed()[K_DOWN]):
         if(y_pos < dimensions.bottomleft[1]):
             y_pos += 1
