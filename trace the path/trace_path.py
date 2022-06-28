@@ -34,3 +34,9 @@ while True:
             y_pos -= 1
         else:
             y_pos = dimensions.topleft[1] +radius
+    if(pygame.key.get_pressed()[K_DOWN]):
+        if(y_pos < dimensions.bottomleft[1] - radius):
+            y_pos += 1
+        else:
+            y_pos = dimensions.bottomleft[1] - radius
+    print(ball.centerx,",",ball.centery)
