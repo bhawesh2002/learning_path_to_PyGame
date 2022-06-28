@@ -43,8 +43,12 @@ while True:  # loop forever
     if(pygame.key.get_pressed()[K_DOWN]):
         if(y_pos < dimensions.bottomleft[1]):
             y_pos += 1
-        else:
-            y_pos = dimensions.bottomleft[1]
+        elif(y_pos == dimensions.bottomleft[1]):
+            while(y_pos != dimensions.centery):
+                y_pos -= 1
+                window.fill((0,0,0))
+                ball = pygame.draw.circle(window,(22,255,22),(x_pos,y_pos),25)
+                pygame.display.update()
     if(pygame.key.get_pressed()[K_UP]):
         if(y_pos > dimensions.topleft[1]):
             y_pos -= 1
