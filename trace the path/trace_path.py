@@ -24,3 +24,8 @@ while True:
             x_pos += 1
         else:
             x_pos = dimensions.topright[0]
+    if(pygame.key.get_pressed()[K_LEFT]):
+        if(x_pos > dimensions.topleft[0]):
+            x_pos -= 1
+        else:
+            x_pos = dimensions.topleft[0]
