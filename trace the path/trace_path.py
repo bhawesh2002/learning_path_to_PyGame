@@ -38,4 +38,3 @@ while True:
             y_pos += 1
         else:
             y_pos = dimensions.bottomleft[1] - radius
-    print(ball.centerx,",",ball.centery)
