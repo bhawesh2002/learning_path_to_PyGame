@@ -11,7 +11,7 @@ window = pygame.display.set_mode((width, height))  # create the window
 dimensions = window.get_rect()  # get the dimensions of the window
 x_pos = 400  # set the x position of the ball
 y_pos = 0  # set the y position of the ball
-radius =25
+radius = 25
 while True:  # loop forever
     window.fill((0, 0, 0))  # fill the window with black
     # draw the ball on the 1.window of 2.light green color 3.position 4.radius
@@ -30,7 +30,8 @@ while True:  # loop forever
             while(x_pos != dimensions.centerx):
                 x_pos -= 1
                 window.fill((0, 0, 0))
-                ball = pygame.draw.circle(window, (22, 255, 22), (x_pos, y_pos), radius)
+                ball = pygame.draw.circle(
+                    window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > dimensions.topleft[0]):
@@ -38,8 +39,9 @@ while True:  # loop forever
         elif(x_pos == dimensions.topleft[0]):
             while(x_pos != dimensions.centerx):
                 x_pos += 1
-                window.fill((0,0,0))
-                ball = pygame.draw.circle(window, (22, 255, 22), (x_pos, y_pos), radius)
+                window.fill((0, 0, 0))
+                ball = pygame.draw.circle(
+                    window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_DOWN]):
         if(y_pos < dimensions.bottomleft[1]):
@@ -47,8 +49,9 @@ while True:  # loop forever
         elif(y_pos == dimensions.bottomleft[1]):
             while(y_pos != dimensions.centery):
                 y_pos -= 1
-                window.fill((0,0,0))
-                ball = pygame.draw.circle(window,(22,255,22),(x_pos,y_pos),radius)
+                window.fill((0, 0, 0))
+                ball = pygame.draw.circle(
+                    window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_UP]):
         if(y_pos > dimensions.topleft[1]):
@@ -56,6 +59,7 @@ while True:  # loop forever
         elif(y_pos == dimensions.topleft[1]):
             while(y_pos != dimensions.centery):
                 y_pos += 1
-                window.fill((0,0,0))
-                ball = pygame.draw.circle(window,(22,255,22),(x_pos,y_pos),radius)
+                window.fill((0, 0, 0))
+                ball = pygame.draw.circle(
+                    window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
