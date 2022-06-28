@@ -5,9 +5,7 @@ import pygame  # import the pygame module
 from pygame.locals import *
 
 pygame.init()  # initialize the pygame module
-
 width, height = 800, 600  # set the width and height of the screen
-
 window = pygame.display.set_mode((width, height))  # create the window
 dimensions = window.get_rect()  # get the dimensions of the window
 x_pos = 400  # set the x position of the ball
@@ -27,7 +25,7 @@ while True:  # loop forever
         if(x_pos < dimensions.topright[0]):
             x_pos += 1  # move the ball to the right
         elif(x_pos == dimensions.topright[0]):
-            x_pos -= 200
+            x_pos -= 10
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > dimensions.topleft[0]):
             x_pos -= 1
