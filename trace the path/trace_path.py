@@ -1,4 +1,3 @@
-from cmath import e
 import sys
 import pygame
 from pygame.locals import *
