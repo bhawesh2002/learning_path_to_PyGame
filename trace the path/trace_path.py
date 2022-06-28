@@ -20,12 +20,12 @@ while True:
             pygame.quit()
             sys.exit()
     if(pygame.key.get_pressed()[K_RIGHT]):
-        if(x_pos < dimensions.topright[0]):
+        if(x_pos < dimensions.topright[0] - radius):
             x_pos += 1
         else:
-            x_pos = dimensions.topright[0]
+            x_pos = dimensions.topright[0] - radius
     if(pygame.key.get_pressed()[K_LEFT]):
-        if(x_pos > dimensions.topleft[0]):
+        if(x_pos > dimensions.topleft[0] + radius):
             x_pos -= 1
         else:
-            x_pos = dimensions.topleft[0]
+            x_pos = dimensions.topleft[0] + radius
