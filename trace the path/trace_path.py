@@ -29,3 +29,8 @@ while True:
             x_pos -= 1
         else:
             x_pos = dimensions.topleft[0] + radius
+    if(pygame.key.get_pressed()[K_UP]):
+        if(y_pos > dimensions.topleft[1] + radius):
+            y_pos -= 1
+        else:
+            y_pos = dimensions.topleft[1] +radius
