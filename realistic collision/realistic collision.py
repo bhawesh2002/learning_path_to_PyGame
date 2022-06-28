@@ -21,6 +21,10 @@ while True:
     if(pygame.key.get_pressed()[K_RIGHT]):
         if(x_pos < dimensions.topright[0] - radius):
             x_pos += 1
+            window.fill((0,0,0))
+            ball = pygame.draw.circle(window,(22,255,22),(x_pos,y_pos),radius)
+            path = pygame.draw.circle(window,(22,255,22),(x_pos -radius,y_pos- radius),5)
+            pygame.display.update()
         else:
             x_pos = dimensions.topright[0] - radius
     if(pygame.key.get_pressed()[K_LEFT]):
