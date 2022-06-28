@@ -25,7 +25,10 @@ while True:  # loop forever
         if(x_pos < dimensions.topright[0]):
             x_pos += 1  # move the ball to the right
         elif(x_pos == dimensions.topright[0]):
-            x_pos -= 10
+            while(x_pos == dimensions.centerx):
+                x_pos -= 1
+                ball = pygame.draw.circle(window, (22, 255, 22), (x_pos, y_pos), 25)
+                pygame.display.update()
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > dimensions.topleft[0]):
             x_pos -= 1
