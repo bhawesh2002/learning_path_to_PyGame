@@ -24,9 +24,9 @@ while True:  # loop forever
             sys.exit()  # exit the game
     if(pygame.key.get_pressed()[K_RIGHT]):  # if the right key is pressed
         # if the ball is not at the right edge of the screen
-        if(x_pos < dimensions.topright[0]):
+        if(x_pos < dimensions.topright[0]-radius):
             x_pos += 1  # move the ball to the right
-        elif(x_pos == dimensions.topright[0]):
+        elif(x_pos == dimensions.topright[0]-radius):
             while(x_pos != dimensions.centerx):
                 x_pos -= 1
                 window.fill((0, 0, 0))
@@ -34,9 +34,9 @@ while True:  # loop forever
                     window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_LEFT]):
-        if(x_pos > dimensions.topleft[0]):
+        if(x_pos > dimensions.topleft[0]-radius):
             x_pos -= 1
-        elif(x_pos == dimensions.topleft[0]):
+        elif(x_pos == dimensions.topleft[0]-radius):
             while(x_pos != dimensions.centerx):
                 x_pos += 1
                 window.fill((0, 0, 0))
@@ -44,9 +44,9 @@ while True:  # loop forever
                     window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_DOWN]):
-        if(y_pos < dimensions.bottomleft[1]):
+        if(y_pos < dimensions.bottomleft[1]-radius):
             y_pos += 1
-        elif(y_pos == dimensions.bottomleft[1]):
+        elif(y_pos == dimensions.bottomleft[1]-radius):
             while(y_pos != dimensions.centery):
                 y_pos -= 1
                 window.fill((0, 0, 0))
@@ -54,9 +54,9 @@ while True:  # loop forever
                     window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_UP]):
-        if(y_pos > dimensions.topleft[1]):
+        if(y_pos > dimensions.topleft[1]-radius):
             y_pos -= 1
-        elif(y_pos == dimensions.topleft[1]):
+        elif(y_pos == dimensions.topleft[1]-radius):
             while(y_pos != dimensions.centery):
                 y_pos += 1
                 window.fill((0, 0, 0))
