@@ -23,10 +23,12 @@ while True:  # loop forever
             pygame.quit()  # quit the game
             sys.exit()  # exit the game
     if(pygame.key.get_pressed()[K_RIGHT]):  # if the right key is pressed
-        if(x_pos < dimensions.topright[0]):  # if the ball is not at the right edge of the screen
+        # if the ball is not at the right edge of the screen
+        if(x_pos < dimensions.topright[0]):
             x_pos += 1  # move the ball to the right
         else:  # if the ball is at the right edge of the screen
-            x_pos = dimensions.topright[0]  # set the ball to the right edge of the screen
+            # set the ball to the right edge of the screen
+            x_pos = dimensions.topright[0]
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > dimensions.topleft[0]):
             x_pos -= 1
