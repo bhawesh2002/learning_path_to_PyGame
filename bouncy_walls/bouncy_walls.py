@@ -26,9 +26,8 @@ while True:  # loop forever
         # if the ball is not at the right edge of the screen
         if(x_pos < dimensions.topright[0]):
             x_pos += 1  # move the ball to the right
-        else:  # if the ball is at the right edge of the screen
-            # set the ball to the right edge of the screen
-            x_pos = dimensions.topright[0]
+        elif(x_pos == dimensions.topright[0]):
+            x_pos -= 200
     if(pygame.key.get_pressed()[K_LEFT]):
         if(x_pos > dimensions.topleft[0]):
             x_pos -= 1
