@@ -7,7 +7,9 @@ pygame.init()
 width,height = 800,600
 window = pygame.display.set_mode((width,height))
 dimensions = window.get_rect()
-
+x_pos = dimensions.centerx
+y_pos = dimensions.centery
+radius = 25
 while True:
     window.fill((0,0,0))
     pygame.display.update()
