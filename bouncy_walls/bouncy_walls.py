@@ -34,9 +34,9 @@ while True:  # loop forever
                     window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_LEFT]):
-        if(x_pos > dimensions.topleft[0]-radius):
+        if(x_pos > dimensions.topleft[0]+radius):
             x_pos -= 1
-        elif(x_pos == dimensions.topleft[0]-radius):
+        elif(x_pos == dimensions.topleft[0]+radius):
             while(x_pos != dimensions.centerx):
                 x_pos += 1
                 window.fill((0, 0, 0))
@@ -54,9 +54,9 @@ while True:  # loop forever
                     window, (22, 255, 22), (x_pos, y_pos), radius)
                 pygame.display.update()
     if(pygame.key.get_pressed()[K_UP]):
-        if(y_pos > dimensions.topleft[1]-radius):
+        if(y_pos > dimensions.topleft[1]+radius):
             y_pos -= 1
-        elif(y_pos == dimensions.topleft[1]-radius):
+        elif(y_pos == dimensions.topleft[1]+radius):
             while(y_pos != dimensions.centery):
                 y_pos += 1
                 window.fill((0, 0, 0))
