@@ -11,7 +11,7 @@ dimensions = window.get_rect()  # get the dimensions of the window
 x_pos = 400  # set the x position of the ball
 y_pos = 0  # set the y position of the ball
 while True:  # loop forever
-    window.fill((0, 0, 0))  # fill the window with white
+    window.fill((0, 0, 0))  # fill the window with black
     # draw the ball on the 1.window of 2.light green color 3.position 4.radius
     ball = pygame.draw.circle(window, (22, 255, 22), (x_pos, y_pos), 25)
     pygame.display.update()  # update the display
