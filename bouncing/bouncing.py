@@ -1,3 +1,4 @@
+from cmath import e
 import sys
 import pygame
 from pygame.locals import *
@@ -28,17 +29,23 @@ def main():
                 window, (22, 255, 22), (x_pos, y_pos), 25)
             pygame.display.update()
             if(y_pos >= dimensions.bottomright[1] - 25):
-                counter -= 1
                 while(y_pos >= (dimensions.centery + resist)):
-                    y_pos -= 0.1
-                    resist += 0.1
                     window.fill((0, 0, 0))
                     ball = pygame.draw.circle(
                         window, (22, 255, 22), (x_pos, y_pos), 25)
                     pygame.display.update()
-                    if(counter == 0):
-                        print("GROUNDED")
-                        break
+                    if(pygame.key.get_pressed()[K_RIGHT]):
+                        if(x_pos <= dimensions.topright[0] - 25):
+                            x_pos += 0.1
+                        else:
+                            x_pos = dimensions.topright[0] - 25
+                    if(pygame.key.get_pressed()[K_LEFT]):
+                        if(x_pos >= dimensions.topleft[0] + 25):
+                            x_pos -= 0.1
+                        else:
+                            x_pos = dimensions.topleft[0] + 25
+                    y_pos -= 0.1
+                    resist += 0.1
         pygame.display.update()
 
 
