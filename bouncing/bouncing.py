@@ -28,7 +28,15 @@ def main():
             pygame.display.update()
             if(y_pos >= dimensions.bottomright[1] - 25):
                 counter -= 1
-                print(counter)
+                while(y_pos >= dimensions.centery):
+                    y_pos -= 0.1
+                    window.fill((0,0,0))
+                    ball = pygame.draw.circle(
+                        window, (22, 255, 22), (x_pos, y_pos), 25)
+                    pygame.display.update()
+                    if(counter == 0):
+                        print("GROUNDED")
+                        break
         pygame.display.update()
 
 
