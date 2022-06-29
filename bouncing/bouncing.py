@@ -14,7 +14,7 @@ gravity = 0.5
 def main():
     x_pos = dimensions.centerx
     y_pos = dimensions.centery
-    counter = 3
+    counter = 6
     resist = 50
     while True:
         for event in pygame.event.get():
@@ -27,24 +27,27 @@ def main():
             ball = pygame.draw.circle(
                 window, (22, 255, 22), (x_pos, y_pos), 25)
             pygame.display.update()
-            if(y_pos >= dimensions.bottomright[1] - 25):
-                while(y_pos >= (dimensions.centery + resist)):
-                    window.fill((0, 0, 0))
-                    ball = pygame.draw.circle(
-                        window, (22, 255, 22), (x_pos, y_pos), 25)
-                    pygame.display.update()
-                    y_pos -= 0.1
-                    resist += 0.1
-                    if(pygame.key.get_pressed()[K_RIGHT]):
-                        if(x_pos <= dimensions.topright[0] - 25):
-                            x_pos += 0.1
-                        else:
-                            x_pos = dimensions.topright[0] - 25
-                    if(pygame.key.get_pressed()[K_LEFT]):
-                        if(x_pos >= dimensions.topleft[0] + 25):
-                            x_pos -= 0.1
-                        else:
-                            x_pos = dimensions.topleft[0] + 25
+        if(y_pos >= dimensions.bottomright[1] - 25):
+            counter -= 1
+            if(counter == 0):
+                counter = 3
+                resist = 50
+            while(y_pos >= dimensions.centery + resist):
+                y_pos -= 0.1
+                resist += 0.1
+                window.fill((0, 0, 0))
+                ball = pygame.draw.circle(
+                    window, (22, 255, 22), (x_pos, y_pos), 25)
+                pygame.display.update()
+        if(pygame.key.get_pressed()[K_UP]):
+            if(y_pos >= dimensions.topleft[1] + 25):
+                y_pos -= 1
+                window.fill((0, 0, 0))
+                ball = pygame.draw.circle(
+                    window, (22, 255, 22), (x_pos, y_pos), 25)
+                pygame.display.update()
+            else:
+                y_pos = dimensions.topleft[1] + 25
         pygame.display.update()
 
 
