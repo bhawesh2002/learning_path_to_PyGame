@@ -1,4 +1,3 @@
-from cmath import e
 import sys
 import pygame
 from pygame.locals import *
@@ -34,6 +33,8 @@ def main():
                     ball = pygame.draw.circle(
                         window, (22, 255, 22), (x_pos, y_pos), 25)
                     pygame.display.update()
+                    y_pos -= 0.1
+                    resist += 0.1
                     if(pygame.key.get_pressed()[K_RIGHT]):
                         if(x_pos <= dimensions.topright[0] - 25):
                             x_pos += 0.1
@@ -44,8 +45,6 @@ def main():
                             x_pos -= 0.1
                         else:
                             x_pos = dimensions.topleft[0] + 25
-                    y_pos -= 0.1
-                    resist += 0.1
         pygame.display.update()
 
 
