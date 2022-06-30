@@ -14,7 +14,6 @@ gravity = 0.5
 def main():
     x_pos = dimensions.centerx
     y_pos = dimensions.centery
-    counter = 6
     resist = 50
     while True:
         for event in pygame.event.get():
