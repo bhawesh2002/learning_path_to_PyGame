@@ -28,11 +28,8 @@ def main():
                 window, (22, 255, 22), (x_pos, y_pos), 25)
             pygame.display.update()
         if(y_pos >= dimensions.bottomright[1] - 25):
-            counter -= 1
-            if(counter == 0):
-                counter = 3
-                resist = 50
             while(y_pos >= dimensions.centery + resist):
+                print("WOKD")
                 y_pos -= 0.1
                 resist += 0.1
                 window.fill((0, 0, 0))
@@ -41,6 +38,7 @@ def main():
                 pygame.display.update()
         if(pygame.key.get_pressed()[K_UP]):
             if(y_pos >= dimensions.topleft[1] + 25):
+                resist = 50
                 y_pos -= 1
                 window.fill((0, 0, 0))
                 ball = pygame.draw.circle(
